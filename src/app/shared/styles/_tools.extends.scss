@@ -1,0 +1,73 @@
+
+
+//## flex controls
+@mixin justify-content($value) {
+  justify-content: $value;
+  //-webkit-justify-content: $value;
+}
+
+@mixin align-items($value) {
+  align-items: $value;
+  //-webkit-align-items: $value;
+}
+
+@mixin flex-size($value) {
+  flex: $value;
+  //-webkit-flex: $value;
+  //-ms-flex: $value;
+}
+
+@mixin flex-direction($value) {
+  flex-direction: $value;
+  //-ms-flex-direction: $value;
+  //-webkit-flex-direction: $value;
+}
+
+@mixin flex($type: flex, $align: null, $justify: null, $flex: null, $direction: null) {
+  display: $type;
+  //display: -webkit- + $type;
+  //display: -ms- + $type + box;
+  //display: -webkit- + $type;
+
+  @if ($flex) {
+    @include flex-size($flex);
+  }
+
+  @if ($align) {
+    @include align-items($justify);
+  }
+
+  @if ($justify) {
+    @include justify-content($justify);
+  }
+
+  @if ($direction) {
+    @include flex-direction($direction);
+  }
+}
+
+@mixin flex-all {
+  @include flex($align: center, $justify: center);
+}
+
+
+%flex {
+  @include flex;
+
+  &-all {
+    @include flex($justify: center, $align: center);
+  }
+
+  &-center {
+    @include align-items(center);
+    @include justify-content(center);
+
+    &-x {
+      @include justify-content(center);
+    }
+
+    &-y {
+      @include align-items(center);
+    }
+  }
+}

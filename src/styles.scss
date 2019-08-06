@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~sassync/sass/_default/import";
+@import "~sassync/sass/_default/_theme/reset";
+@import "~bootstrap/scss/bootstrap-grid";
+
+
+html {
+  @include size(100%);
+}
+
+body {
+  background-color: #f7f7ff;
+  @include size(100%);
+  overflow: hidden;
+}
+
+html, * {
+  box-sizing: border-box;
+}

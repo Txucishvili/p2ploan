@@ -1,0 +1,33 @@
+@import "../shared/styles/defaults";
+
+.theme {
+  &--wrapper {
+    @include size(100%);
+  }
+
+  &--grid {
+    @extend %flex;
+
+    &--split {
+      @extend %flex;
+      @include flex-direction(column);
+    }
+
+    &--side {
+      &--a {
+
+      }
+
+      &--b {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.flexer {
+  display: block;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

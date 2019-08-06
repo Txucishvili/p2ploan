@@ -1,0 +1,7 @@
+@import "~sassync/sass/_default/import";
+
+.theme {
+  &--simple {
+    @include size(100%);
+  }
+}

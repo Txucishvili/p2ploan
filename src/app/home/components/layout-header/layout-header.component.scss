@@ -1,0 +1,107 @@
+@import "../../../shared/styles/defaults";
+
+.side-header {
+  font-family: Roboto;
+
+  &--position {
+    width: 100%;
+    height: 106px;
+    background-color: #ffffff;
+    border: 1px solid #EEEEEE;
+    border-left: 0;
+  }
+
+  &--grider {
+    width: 100%;
+    @extend %flex;
+  }
+
+  &--logo {
+    &--position {
+      height: 100%;
+      @extend %flex;
+      @extend %flex-center-y;
+      margin-left: 70px;
+    }
+  }
+
+  &--user-side {
+    margin-left: auto;
+  }
+}
+
+.logo {
+  outline: none;
+  cursor: pointer;
+}
+
+.header-btn {
+  &--position {
+    @include size(105px);
+    background-color: transparent;
+    height: 100%;
+    @extend %flex-all;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    transition: all .125s ease;
+
+    &:hover {
+      background-color: rgba($oc-gray-1, .6);
+    }
+  }
+}
+
+
+.balance-btn {
+  &--position {
+    @extend %flex;
+    @extend %flex-center-y;
+    white-space: nowrap;
+    padding: 0 25px;
+    border-right: 1px solid #EEEEEE;
+  }
+}
+
+.user-panel {
+  &--position {
+    @extend %flex;
+    @extend %flex-center-y;
+    padding: 0 40px;
+    transition: all .125s ease;
+
+    &:hover {
+      //background-color: rgba($oc-gray-1, .6);
+    }
+  }
+
+  &--avatar {
+    @include size(58px);
+    margin-right: 15px;
+    border-radius: 100%;
+    overflow: hidden;
+    background-color: #EEEEEE;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &--name {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &--arrow {
+    margin-left: 23px;
+
+    svg {
+      width: 14px;
+    }
+  }
+}
+
+
+.flex {
+  @extend %flex;
+}
